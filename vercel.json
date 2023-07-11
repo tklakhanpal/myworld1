@@ -1,0 +1,14 @@
+
+{
+	"builds": [{
+	"src": "my_game_club/wsgi.py",
+	"use": "@vercel/python",
+	"config": { "maxlamdasize": "15mb", "runtime": "python3.9"}
+}],
+"routes": [
+	{
+		"src": "/(.*)",
+		"dest": "my_game_club/wsgi.py"
+	}
+    ]
+}
